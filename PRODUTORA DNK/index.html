@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNK Produtora | Vídeo Institucional e Audiovisual em Fortaleza CE</title>
+  <meta name="description" content="Produtora audiovisual em Fortaleza-CE especializada em vídeo institucional, cobertura de eventos, redes sociais e publicitário. Atendemos todo o Brasil.">
+  <meta property="og:title" content="DNK Produtora | Audiovisual que Posiciona Marcas">
+  <meta property="og:description" content="Videomakers apaixonados pelo audiovisual. Do briefing à entrega, transformamos sua marca em filme que conecta e converte.">
+  <meta property="og:image" content="LOGO.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="keywords" content="produtora audiovisual Fortaleza, vídeo institucional, cobertura de eventos, produtora de vídeo Ceará, vídeo corporativo Fortaleza">
+  <link rel="icon" href="LOGO.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #060608;
+      --bg2:       #0C0C10;
+      --card:      rgba(255,255,255,0.04);
+      --pink:      #FF2D78;
+      --orange:    #FF7A1A;
+      --purple:    #8A2BE2;
+      --grad:      linear-gradient(120deg, #FF2D78, #FF7A1A, #8A2BE2);
+      --grad-anim: linear-gradient(120deg, #FF2D78, #FF7A1A, #8A2BE2, #FF2D78, #FF7A1A);
+      --t1:        #FFFFFF;
+      --t2:        #888899;
+      --t3:        #3A3A4A;
+      --r:         16px;
+      --rs:        8px;
+      --fh:        'Outfit', sans-serif;
+      --fb:        'Space Grotesk', -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--fb);
+      background: var(--bg);
+      color: var(--t1);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Grain overlay */
+    body::after {
+      content: '';
+      position: fixed; inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    /* =============================================
+       TYPOGRAPHY
+    ============================================= */
+    h1, h2, h3, .display {
+      font-family: var(--fh);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+    }
+    h1 { font-size: clamp(3.2rem, 9vw, 7rem); font-weight: 800; }
+    h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; }
+    h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+
+    .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: var(--fb);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 1.1rem;
+    }
+
+    /* =============================================
+       LAYOUT
+    ============================================= */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Full-bleed helper */
+    .full-bleed {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* =============================================
+       GLOW FRAME
+    ============================================= */
+    .frame {
+      position: relative;
+      border-radius: var(--r);
+      background: var(--card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      overflow: hidden;
+    }
+    .frame::before {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: var(--grad);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0.3;
+      pointer-events: none;
+      transition: opacity 0.35s;
+    }
+    .frame:hover::before { opacity: 0.75; }
+
+    /* =============================================
+       BUTTONS  (retangular — design-forward)
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 4px;
+      font-family: var(--fb);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.25s, background 0.2s;
+    }
+    .btn-primary {
+      background: var(--grad-anim);
+      background-size: 250% auto;
+      color: #fff;
+      animation: gshift 4s linear infinite;
+      box-shadow: 0 0 32px rgba(255,45,120,0.2), 0 0 60px rgba(138,43,226,0.1);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px rgba(255,45,120,0.45), 0 0 100px rgba(138,43,226,0.22);
+    }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.5); transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--t2);
+      border: 1px solid var(--t3);
+    }
+    .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,0.25); }
+
+    @keyframes gshift { to { background-position: 250% center; } }
+
+    /* =============================================
+       SCROLL ANIMATIONS
+    ============================================= */
+    .up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .up.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+
+    /* =============================================
+       1. HEADER
+    ============================================= */
+    #hdr {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1.4rem 0;
+      transition: padding 0.3s, background 0.3s;
+    }
+    #hdr.stuck {
+      padding: 0.8rem 0;
+      background: rgba(6,6,8,0.90);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .hdr-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    /* Logo texto sempre visível */
+    .logo-link { text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .logo-wordmark {
+      font-family: var(--fh);
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: #fff;
+      line-height: 1;
+    }
+    .logo-wordmark .dot {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    nav { display: flex; gap: 2rem; list-style: none; }
+    nav a {
+      color: var(--t2);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #fff; }
+
+    .hdr-btn { padding: 0.65rem 1.25rem; font-size: 0.72rem; }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .burger span { display: block; width: 22px; height: 1.5px; background: #fff; transition: 0.3s; }
+
+    @media (max-width: 820px) {
+      nav { display: none; }
+      .burger { display: flex; }
+    }
+
+    /* =============================================
+       2. HERO  (fundo cinematográfico)
+    ============================================= */
+    #hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 9rem 0 7rem;
+    }
+
+    /* Video/imagem placeholder background */
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, #0A040C 0%, #060608 45%, #04060E 100%);
+    }
+    /* Imagem de fundo do hero */
+    .hero-media-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+
+    /* Overlay escuro sobre a imagem */
+    .hero-media-placeholder {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(0deg, rgba(6,6,8,0.85) 0%, rgba(6,6,8,0.3) 60%, rgba(6,6,8,0.7) 100%);
+      z-index: 1;
+    }
+
+    /* Feixes de luz radiais */
+    .hero-beam-1 {
+      position: absolute;
+      top: -20%; left: -8%;
+      width: 75%; height: 75%;
+      background: radial-gradient(ellipse at center, rgba(255,45,120,0.18) 0%, transparent 62%);
+      pointer-events: none; z-index: 2;
+    }
+    .hero-beam-2 {
+      position: absolute;
+      bottom: -15%; right: -5%;
+      width: 65%; height: 70%;
+      background: radial-gradient(ellipse at center, rgba(138,43,226,0.2) 0%, transparent 62%);
+      pointer-events: none; z-index: 2;
+    }
+    .hero-beam-3 {
+      position: absolute;
+      top: 25%; left: 30%;
+      width: 45%; height: 50%;
+      background: radial-gradient(ellipse at center, rgba(255,122,26,0.07) 0%, transparent 65%);
+      pointer-events: none; z-index: 2;
+    }
+
+    /* Grid lines cinematográficas */
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none; z-index: 2;
+      -webkit-mask: linear-gradient(to bottom, transparent, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 70%, transparent);
+      mask: linear-gradient(to bottom, transparent, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 70%, transparent);
+    }
+
+    .hero-content {
+      position: relative; z-index: 3;
+      text-align: center;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--fb);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--t2);
+      margin-bottom: 2rem;
+    }
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--grad);
+      opacity: 0.7;
+    }
+
+    .hero-h1 { margin-bottom: 1.5rem; }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--t2);
+      max-width: 540px;
+      margin: 0 auto 3rem;
+      font-weight: 400;
+      line-height: 1.8;
+    }
+
+    .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .hero-ctas .btn { padding: 1rem 2.25rem; font-size: 0.82rem; }
+
+    /* Scroll indicator */
+    .scroll-ind {
+      position: absolute;
+      bottom: 2.5rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+      z-index: 3;
+    }
+    .scroll-ind-line {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, rgba(255,45,120,0.9), rgba(138,43,226,0.3));
+      animation: sindpulse 2s ease-in-out infinite;
+    }
+    @keyframes sindpulse {
+      0%,100% { transform: scaleY(1); opacity: 0.9; }
+      50% { transform: scaleY(0.35); opacity: 0.2; }
+    }
+
+    /* =============================================
+       CLIENTES  (2ª seção, logo abaixo do hero)
+    ============================================= */
+    #clients {
+      padding: 4rem 0;
+      position: relative;
+    }
+    #clients::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(255,255,255,0.012);
+      pointer-events: none;
+    }
+    .clients-label {
+      text-align: center;
+      color: var(--t3);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 2.25rem;
+      font-weight: 600;
+    }
+    .marquee-wrap {
+      overflow: hidden;
+      -webkit-mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    .marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      width: max-content;
+      animation: marquee 24s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+
+    /* Logos com cores reais, bem visíveis */
+    .client-logo {
+      height: 140px;
+      width: auto;
+      max-width: 280px;
+      object-fit: contain;
+      flex-shrink: 0;
+      opacity: 1;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .client-logo:hover { opacity: 0.85; transform: scale(1.05); }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* =============================================
+       3. PROVA SOCIAL
+    ============================================= */
+    #prova { padding: 5rem 0; }
+    .prova-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .prova-item {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      position: relative;
+    }
+    .prova-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0; top: 20%; height: 60%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.08), transparent);
+    }
+    .prova-n {
+      font-family: var(--fh);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .prova-l { font-size: 0.85rem; color: var(--t2); font-weight: 500; }
+    .prova-line {
+      width: 100%; height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,45,120,0.25), rgba(138,43,226,0.25), transparent);
+      margin-top: 3.5rem;
+    }
+    @media (max-width: 560px) {
+      .prova-grid { grid-template-columns: 1fr; }
+      .prova-item:not(:last-child)::after { display: none; }
+      .prova-item:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.05); }
+    }
+
+    /* =============================================
+       SECTION HEADER
+    ============================================= */
+    .sec-hdr { text-align: center; margin-bottom: 3.5rem; }
+    .sec-hdr p { color: var(--t2); font-size: 1rem; max-width: 520px; margin: 1rem auto 0; line-height: 1.75; }
+
+    /* =============================================
+       4. SERVIÇOS  (com fundo)
+    ============================================= */
+    #servicos {
+      padding: 7.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Fundo malha + gradiente */
+    #servicos::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(138,43,226,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(138,43,226,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    #servicos::after {
+      content: '';
+      position: absolute;
+      top: -10%; left: -5%;
+      width: 60%; height: 70%;
+      background: radial-gradient(ellipse, rgba(138,43,226,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .srv-bg-beam {
+      position: absolute;
+      bottom: -10%; right: -5%;
+      width: 55%; height: 65%;
+      background: radial-gradient(ellipse, rgba(255,45,120,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .srv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      position: relative; z-index: 1;
+    }
+    .srv-card {
+      padding: 2.75rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .srv-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 50px rgba(255,45,120,0.1), 0 0 100px rgba(138,43,226,0.07);
+    }
+
+    .srv-num {
+      font-family: var(--fh);
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0.6;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .srv-icon {
+      width: 44px; height: 44px;
+      margin-bottom: 1.25rem;
+      color: var(--t2);
+    }
+    .srv-title { margin-bottom: 0.75rem; }
+    .srv-desc { color: var(--t2); font-size: 0.92rem; line-height: 1.78; }
+
+    @media (max-width: 660px) { .srv-grid { grid-template-columns: 1fr; } }
+
+    /* =============================================
+       5. DIFERENCIAIS  (com fundo)
+    ============================================= */
+    #diferenciais {
+      padding: 7.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #diferenciais::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,45,120,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,45,120,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    #diferenciais::after {
+      content: '';
+      position: absolute;
+      top: 0; right: -5%;
+      width: 55%; height: 60%;
+      background: radial-gradient(ellipse at top right, rgba(255,45,120,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .diff-bg-beam {
+      position: absolute;
+      bottom: -10%; left: -5%;
+      width: 50%; height: 55%;
+      background: radial-gradient(ellipse, rgba(255,122,26,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      position: relative; z-index: 1;
+    }
+    .diff-card {
+      padding: 2.25rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .diff-ico {
+      width: 40px; height: 40px;
+      flex-shrink: 0;
+      color: var(--t2);
+      /* Gradient line accent on top */
+      padding-top: 2px;
+    }
+    .diff-ico-line {
+      width: 32px; height: 2px;
+      background: var(--grad);
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+    .diff-body h3 { margin-bottom: 0.5rem; }
+    .diff-body p { color: var(--t2); font-size: 0.9rem; line-height: 1.75; }
+
+    @media (max-width: 660px) { .diff-grid { grid-template-columns: 1fr; } }
+
+    /* =============================================
+       6. COMO FUNCIONA
+    ============================================= */
+    #processo { padding: 7.5rem 0; }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      position: relative;
+      margin-top: 3.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 26px;
+      left: calc(12.5% + 2px);
+      right: calc(12.5% + 2px);
+      height: 1px;
+      background: linear-gradient(to right, rgba(255,45,120,0.35), rgba(138,43,226,0.35));
+      z-index: 0;
+    }
+    .step { display: flex; flex-direction: column; align-items: center; text-align: center; z-index: 1; }
+    .step-node {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--bg);
+      position: relative;
+      margin-bottom: 1.5rem;
+      flex-shrink: 0;
+    }
+    .step-node::before {
+      content: '';
+      position: absolute; inset: -1.5px;
+      border-radius: 50%;
+      background: var(--grad);
+      z-index: -1;
+    }
+    .step-node::after {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      background: var(--bg);
+    }
+    .step-num {
+      position: relative; z-index: 1;
+      font-family: var(--fh);
+      font-weight: 800; font-size: 0.95rem;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .step h3 { font-size: 0.95rem; margin-bottom: 0.45rem; }
+    .step p { color: var(--t2); font-size: 0.84rem; line-height: 1.65; }
+
+    @media (max-width: 760px) {
+      .timeline { grid-template-columns: 1fr; gap: 0; }
+      .timeline::before { display: none; }
+      .step { flex-direction: row; text-align: left; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .step:last-child { border-bottom: none; }
+      .step-node { margin-bottom: 0; }
+    }
+
+    /* =============================================
+       7. SAME-DAY
+    ============================================= */
+    #sameday { padding: 0 0 5rem; }
+    .sd-block {
+      border-radius: var(--r);
+      padding: 5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(140deg,
+        rgba(255,45,120,0.13) 0%,
+        rgba(255,122,26,0.07) 45%,
+        rgba(138,43,226,0.13) 100%);
+      border: 1px solid rgba(255,45,120,0.18);
+      box-shadow:
+        0 0 80px rgba(255,45,120,0.1),
+        0 0 160px rgba(138,43,226,0.07),
+        inset 0 0 80px rgba(255,45,120,0.03);
+    }
+    .sd-block::before {
+      content: '';
+      position: absolute;
+      top: -40%; left: 50%; transform: translateX(-50%);
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(255,122,26,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .sd-block h2 { margin-bottom: 1.1rem; }
+    .sd-block p { color: var(--t2); max-width: 500px; margin: 0 auto 2.5rem; font-size: 1rem; line-height: 1.8; }
+    @media (max-width: 580px) { .sd-block { padding: 3.5rem 1.5rem; } }
+
+    /* =============================================
+       8. PORTFÓLIO  (tela inteira, sem espaço)
+    ============================================= */
+    #portfolio { padding: 7.5rem 0 0; }
+    .port-header { margin-bottom: 3.5rem; }
+
+    /* Bento grid: 1 destaque (col 1 × 2 rows) + 4 tiles (cols 2-3) + faixa full */
+    .port-grid {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 370px 370px;
+      gap: 0;
+    }
+    a.port-item {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .port-item {
+      border-radius: 0;
+      overflow: hidden;
+      position: relative;
+      background: #0a0a0e;
+      cursor: pointer;
+      border-right: 1px solid rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    /* Bento placement */
+    .port-item:nth-child(1) { grid-column: 1;     grid-row: 1 / 3; border-bottom: none; }
+    .port-item:nth-child(2) { grid-column: 2;     grid-row: 1; }
+    .port-item:nth-child(3) { grid-column: 3;     grid-row: 1; border-right: none; }
+    .port-item:nth-child(4) { grid-column: 2;     grid-row: 2; border-bottom: none; }
+    .port-item:nth-child(5) { grid-column: 3;     grid-row: 2; border-right: none; border-bottom: none; }
+    .port-item:nth-child(6) { grid-column: 1 / 4; grid-row: 3; height: 480px; border-right: none; border-bottom: none; }
+
+    /* Hover overlay */
+    .port-item::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(255,45,120,0.1), rgba(138,43,226,0.1));
+      opacity: 0;
+      transition: opacity 0.35s;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .port-item:hover::before { opacity: 1; }
+
+    .port-thumb {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .port-item:hover .port-thumb { transform: scale(1.04); }
+
+    .port-overlay {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 2;
+    }
+    .port-play {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.93);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.2s;
+    }
+    .port-play::after {
+      content: '';
+      border-style: solid;
+      border-width: 9px 0 9px 18px;
+      border-color: transparent transparent transparent #000;
+      margin-left: 4px;
+    }
+    .port-item:hover .port-overlay { opacity: 1; }
+    .port-item:hover .port-play   { transform: scale(1.1); }
+
+    /* Título + duração (sempre visível) */
+    .port-info {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 4rem 1.5rem 1.25rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+      z-index: 3;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 0.75rem;
+      pointer-events: none;
+    }
+    .port-title {
+      font-family: var(--fb);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+    }
+    .port-item:nth-child(1) .port-title { font-size: 1.05rem; }
+    .port-dur {
+      font-family: var(--fb);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      background: rgba(0,0,0,0.55);
+      padding: 0.18rem 0.45rem;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .port-cta { text-align: center; padding: 3.5rem 0 5rem; }
+
+    @media (max-width: 860px) {
+      .port-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 280px 280px 280px;
+      }
+      .port-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1; border-bottom: 1px solid rgba(255,255,255,0.04); }
+      .port-item:nth-child(2) { grid-column: 1; grid-row: 2; }
+      .port-item:nth-child(3) { grid-column: 2; grid-row: 2; border-right: none; }
+      .port-item:nth-child(4) { grid-column: 1; grid-row: 3; border-bottom: none; }
+      .port-item:nth-child(5) { grid-column: 2; grid-row: 3; border-right: none; border-bottom: none; }
+      .port-item:nth-child(6) { grid-column: 1 / 3; grid-row: 4; height: 360px; }
+    }
+    @media (max-width: 500px) {
+      .port-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+      .port-item { grid-column: 1 !important; grid-row: auto !important; aspect-ratio: 16/10; height: auto !important; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.04); }
+      .port-item:nth-child(6) { aspect-ratio: 16/10; height: auto !important; }
+    }
+
+    /* =============================================
+       9. CTA FINAL
+    ============================================= */
+    #cta-final {
+      padding: 9rem 0;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+    #cta-final::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 750px; height: 750px;
+      background: radial-gradient(circle,
+        rgba(255,45,120,0.14) 0%,
+        rgba(138,43,226,0.07) 40%,
+        transparent 70%);
+      pointer-events: none;
+    }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-inner h2 { margin-bottom: 1.25rem; }
+    .cta-inner p { color: var(--t2); font-size: 1.05rem; max-width: 500px; margin: 0 auto 3rem; }
+    .big-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.2rem 2.75rem;
+      border-radius: 4px;
+      font-family: var(--fb);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      background: var(--grad-anim);
+      background-size: 250% auto;
+      animation: gshift 4s linear infinite, gpulse 3.5s ease-in-out infinite;
+      transition: transform 0.2s;
+    }
+    .big-btn:hover { transform: translateY(-3px) scale(1.015); }
+    @keyframes gpulse {
+      0%,100% { box-shadow: 0 0 40px rgba(255,45,120,0.3), 0 0 80px rgba(138,43,226,0.15); }
+      50%      { box-shadow: 0 0 70px rgba(255,45,120,0.55), 0 0 140px rgba(138,43,226,0.28); }
+    }
+
+    /* =============================================
+       10. FOOTER
+    ============================================= */
+    #footer {
+      background: #020204;
+      padding: 5rem 0 2rem;
+      position: relative;
+    }
+    #footer::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,45,120,0.5), rgba(255,122,26,0.4), rgba(138,43,226,0.5), transparent);
+    }
+    .ft-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .ft-logo {
+      font-family: var(--fh);
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .ft-logo .dot { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .ft-desc { color: var(--t2); font-size: 0.88rem; line-height: 1.8; margin-bottom: 1.5rem; }
+    .ft-socials { display: flex; gap: 0.625rem; }
+    .ft-soc {
+      width: 36px; height: 36px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      color: var(--t2);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .ft-soc:hover { background: rgba(255,45,120,0.12); color: #fff; border-color: rgba(255,45,120,0.25); }
+    .ft-col h4 {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--t2); margin-bottom: 1.2rem;
+    }
+    .ft-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .ft-col ul a { color: var(--t2); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .ft-col ul a:hover { color: #fff; }
+    .ft-contact {
+      display: flex; align-items: center; gap: 0.5rem;
+      color: var(--t2); font-size: 0.88rem; text-decoration: none;
+      margin-bottom: 0.65rem; transition: color 0.2s;
+    }
+    .ft-contact:hover { color: #fff; }
+    .ft-bottom {
+      border-top: 1px solid rgba(255,255,255,0.04);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 0.75rem;
+    }
+    .ft-copy { color: var(--t3); font-size: 0.78rem; }
+    .ft-seo { color: var(--t3); font-size: 0.78rem; }
+    @media (max-width: 880px) { .ft-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) {
+      #footer { padding: 2rem 0 1rem; }
+      .ft-grid { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+      .ft-col-nav { display: none; }
+      .ft-bottom { flex-direction: column; text-align: center; gap: 0.4rem; }
+    }
+
+    /* =============================================
+       FLOAT WHATSAPP
+    ============================================= */
+    .wa-float {
+      position: fixed;
+      bottom: 1.75rem; right: 1.75rem;
+      z-index: 998;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--grad-anim);
+      background-size: 250% auto;
+      animation: gshift 4s linear infinite;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(255,45,120,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 32px rgba(255,45,120,0.55); }
+    .wa-float svg { width: 22px; height: 22px; fill: #fff; }
+
+    /* =============================================
+       MOBILE GLOBAL
+    ============================================= */
+    @media (max-width: 768px) {
+      .frame::before { opacity: 0.18; }
+      .btn-primary { box-shadow: 0 0 20px rgba(255,45,120,0.18); }
+      .big-btn { animation: gshift 4s linear infinite; box-shadow: 0 0 28px rgba(255,45,120,0.22); }
+    }
+
+    /* =============================================
+       MODAL ORÇAMENTO
+    ============================================= */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 1200;
+      display: flex; align-items: center; justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.28s;
+    }
+    .modal-backdrop.open { opacity: 1; pointer-events: all; }
+    .modal-box {
+      background: rgba(10,10,16,0.97);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      width: 100%; max-width: 420px;
+      position: relative;
+      transform: translateY(22px) scale(0.97);
+      transition: transform 0.28s cubic-bezier(0.34,1.46,0.64,1);
+    }
+    .modal-backdrop.open .modal-box { transform: translateY(0) scale(1); }
+    .modal-box::before {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 16px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,45,120,0.5), rgba(138,43,226,0.45));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      pointer-events: none;
+    }
+    .modal-close {
+      position: absolute; top: 1rem; right: 1.25rem;
+      background: none; border: none;
+      color: rgba(255,255,255,0.35); font-size: 1.5rem;
+      cursor: pointer; line-height: 1;
+      transition: color 0.2s; padding: 0;
+    }
+    .modal-close:hover { color: #fff; }
+    .modal-tag {
+      display: inline-block;
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--pink); margin-bottom: 0.65rem;
+    }
+    .modal-title {
+      font-family: var(--fh);
+      font-size: clamp(1.4rem, 4vw, 1.75rem);
+      font-weight: 700; color: #fff;
+      margin-bottom: 0.5rem; line-height: 1.2;
+    }
+    .modal-sub {
+      font-size: 0.875rem; color: var(--t2);
+      margin-bottom: 1.75rem; line-height: 1.65;
+    }
+    .modal-field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .modal-field label {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--t2);
+    }
+    .modal-field input {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      color: #fff;
+      font-family: var(--fb); font-size: 0.92rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      width: 100%;
+    }
+    .modal-field input:focus {
+      border-color: rgba(255,45,120,0.5);
+      background: rgba(255,255,255,0.07);
+    }
+    .modal-field input::placeholder { color: rgba(255,255,255,0.2); }
+    .modal-submit { width: 100%; margin-top: 0.75rem; justify-content: center; }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================================
+       1. HEADER
+  =========================================== -->
+  <header id="hdr">
+    <div class="container">
+      <div class="hdr-inner">
+
+        <a href="#" class="logo-link" aria-label="DNK Produtora — início">
+          <span class="logo-wordmark">DNK<span class="dot">.</span></span>
+        </a>
+
+        <nav aria-label="Menu principal">
+          <a href="#servicos">Serviços</a>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#cta-final">Contato</a>
+        </nav>
+
+        <a href="https://wa.me/5588997083718?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20um%20or%C3%A7amento."
+           class="btn btn-primary hdr-btn"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Falar com a DNK no WhatsApp">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Orçamento
+        </a>
+
+        <button class="burger" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav(this)">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ===========================================
+       2. HERO  (fundo cinematográfico)
+  =========================================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+
+    <img src="FUNDOO.avif" alt="" class="hero-media-img" aria-hidden="true">
+    <div class="hero-media-placeholder"></div>
+
+    <div class="hero-beam-1"></div>
+    <div class="hero-beam-2"></div>
+    <div class="hero-beam-3"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container">
+      <div class="hero-content up">
+        <div class="hero-eyebrow">Produtora Audiovisual · Fortaleza, CE</div>
+
+        <h1 class="hero-h1">
+          Conteúdo que<br>
+          <span class="grad-text">posiciona.</span>
+        </h1>
+
+        <p class="hero-sub">
+          Do brief à tela, sem enrolação. Transformamos a visão da sua marca em audiovisual que conecta, vende e fica na memória.
+        </p>
+
+        <div class="hero-ctas">
+          <button type="button" class="btn btn-primary" onclick="openModal()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Pedir orçamento no WhatsApp
+          </button>
+          <a href="#portfolio" class="btn btn-outline">Ver portfólio</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-ind" aria-hidden="true">
+      <div class="scroll-ind-line"></div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       CLIENTES  (2ª seção — logo abaixo do hero)
+  =========================================== -->
+  <section id="clients">
+    <div class="container">
+      <p class="clients-label">Marcas que confiaram na DNK</p>
+    </div>
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <!-- Set 1 — cores reais, sem filtro -->
+        <img src="NETFLIX CLIENTE.avif"        alt="Netflix"          class="client-logo" loading="lazy">
+        <img src="M DIAS BRANCO CLIENTE.avif"  alt="M. Dias Branco"   class="client-logo" loading="lazy">
+        <img src="LOUD CLIENTE .avif"          alt="LOUD"             class="client-logo" loading="lazy">
+        <img src="COLEGIO DARWIN CLIENTE.avif" alt="Colégio Darwin"   class="client-logo" loading="lazy">
+        <img src="CURSO CONCEITO CLIENTE.avif" alt="Curso Conceito"   class="client-logo" loading="lazy">
+<!-- Set 2 (loop infinito) -->
+        <img src="NETFLIX CLIENTE.avif"        alt="" class="client-logo" loading="lazy" aria-hidden="true">
+        <img src="M DIAS BRANCO CLIENTE.avif"  alt="" class="client-logo" loading="lazy" aria-hidden="true">
+        <img src="LOUD CLIENTE .avif"          alt="" class="client-logo" loading="lazy" aria-hidden="true">
+        <img src="COLEGIO DARWIN CLIENTE.avif" alt="" class="client-logo" loading="lazy" aria-hidden="true">
+        <img src="CURSO CONCEITO CLIENTE.avif" alt="" class="client-logo" loading="lazy" aria-hidden="true">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       3. PROVA SOCIAL
+  =========================================== -->
+  <section id="prova">
+    <div class="container">
+      <div class="prova-grid">
+        <div class="prova-item up">
+          <div class="prova-n">120+</div><!-- PLACEHOLDER -->
+          <div class="prova-l">Projetos entregues</div>
+        </div>
+        <div class="prova-item up d1">
+          <div class="prova-n">45+</div><!-- PLACEHOLDER -->
+          <div class="prova-l">Marcas atendidas</div>
+        </div>
+        <div class="prova-item up d2">
+          <div class="prova-n">5M+</div><!-- PLACEHOLDER -->
+          <div class="prova-l">Visualizações geradas</div>
+        </div>
+      </div>
+      <div class="prova-line"></div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       4. SERVIÇOS  (fundo malha + gradiente)
+  =========================================== -->
+  <section id="servicos">
+    <div class="srv-bg-beam"></div>
+    <div class="container">
+      <div class="sec-hdr up">
+        <span class="tag">O que fazemos</span>
+        <h2>Serviços que <span class="grad-text">geram resultado</span></h2>
+        <p>Do institucional ao publicitário, entregamos produção com qualidade cinematográfica e visão estratégica de marca.</p>
+      </div>
+
+      <div class="srv-grid">
+
+        <div class="srv-card frame up">
+          <span class="srv-num" aria-hidden="true">01</span>
+          <!-- Ícone: clapperboard / câmera -->
+          <svg class="srv-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="14" width="36" height="24" rx="3"/>
+            <path d="M4 20h36M12 14V8M20 14V8M28 14V8M36 14V8"/>
+            <line x1="8" y1="8" x2="36" y2="8"/>
+          </svg>
+          <h3 class="srv-title">Vídeo Institucional</h3>
+          <p class="srv-desc">Filme que apresenta sua empresa com autoridade e faz o cliente querer saber mais. Roteiro, direção e pós-produção completos.</p>
+        </div>
+
+        <div class="srv-card frame up d1">
+          <span class="srv-num" aria-hidden="true">02</span>
+          <!-- Ícone: smartphone / reel -->
+          <svg class="srv-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="12" y="3" width="20" height="38" rx="3"/>
+            <circle cx="22" cy="36" r="1.5" fill="currentColor"/>
+            <line x1="17" y1="8" x2="27" y2="8"/>
+            <circle cx="22" cy="21" r="5"/>
+            <line x1="22" y1="16" x2="22" y2="18"/>
+            <line x1="22" y1="24" x2="22" y2="26"/>
+            <line x1="17" y1="21" x2="19" y2="21"/>
+            <line x1="25" y1="21" x2="27" y2="21"/>
+          </svg>
+          <h3 class="srv-title">Vídeo para Redes Sociais</h3>
+          <p class="srv-desc">Conteúdo pensado para parar o scroll e gerar resultado. Orgânico e pago. Reels, stories e feed que convertem.</p>
+        </div>
+
+        <div class="srv-card frame up d2">
+          <span class="srv-num" aria-hidden="true">03</span>
+          <!-- Ícone: evento / microfone -->
+          <svg class="srv-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="15" y="4" width="14" height="22" rx="7"/>
+            <path d="M8 22c0 7.732 6.268 14 14 14s14-6.268 14-14"/>
+            <line x1="22" y1="36" x2="22" y2="42"/>
+            <line x1="14" y1="42" x2="30" y2="42"/>
+          </svg>
+          <h3 class="srv-title">Cobertura de Eventos</h3>
+          <p class="srv-desc">Cada momento importante da sua marca registrado com qualidade cinematográfica. Entrega expressa disponível no mesmo dia.</p>
+        </div>
+
+        <div class="srv-card frame up d3">
+          <span class="srv-num" aria-hidden="true">04</span>
+          <!-- Ícone: broadcast / megaphone -->
+          <svg class="srv-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 16h8l18-10v28L14 24H6z"/>
+            <rect x="6" y="16" width="8" height="10" rx="1"/>
+            <path d="M35 15a8 8 0 0 1 0 14"/>
+            <line x1="14" y1="26" x2="14" y2="36"/>
+          </svg>
+          <h3 class="srv-title">Vídeo Publicitário</h3>
+          <p class="srv-desc">Campanhas visuais que vendem. Do conceito à entrega final: TV, digital ou social media.</p>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:3.5rem">
+        <a href="https://wa.me/5588997083718?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20um%20or%C3%A7amento."
+           class="btn btn-primary" target="_blank" rel="noopener noreferrer">Quero um orçamento</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       5. DIFERENCIAIS  (fundo malha + gradiente)
+  =========================================== -->
+  <section id="diferenciais">
+    <div class="diff-bg-beam"></div>
+    <div class="container">
+      <div class="sec-hdr up">
+        <span class="tag">Por que a DNK</span>
+        <h2>O que nos torna <span class="grad-text">diferentes</span></h2>
+      </div>
+
+      <div class="diff-grid">
+
+        <div class="diff-card frame up">
+          <div class="diff-ico">
+            <div class="diff-ico-line"></div>
+            <!-- Ícone: raio -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 3L6 16h8l-2 9 12-13h-8l2-9z"/>
+            </svg>
+          </div>
+          <div class="diff-body">
+            <h3>Entrega same-day</h3>
+            <p>Cobertura de eventos com edição expressa. Material disponível ainda no dia, porque timing importa tanto quanto qualidade.</p>
+          </div>
+        </div>
+
+        <div class="diff-card frame up d1">
+          <div class="diff-ico">
+            <div class="diff-ico-line"></div>
+            <!-- Ícone: mira / foco -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+              <circle cx="14" cy="14" r="10"/>
+              <circle cx="14" cy="14" r="5"/>
+              <circle cx="14" cy="14" r="1.5" fill="currentColor"/>
+              <line x1="14" y1="2" x2="14" y2="7"/>
+              <line x1="14" y1="21" x2="14" y2="26"/>
+              <line x1="2" y1="14" x2="7" y2="14"/>
+              <line x1="21" y1="14" x2="26" y2="14"/>
+            </svg>
+          </div>
+          <div class="diff-body">
+            <h3>Visão estratégica</h3>
+            <p>Não fazemos só vídeo. Entendemos o posicionamento da sua marca antes de ligar a câmera.</p>
+          </div>
+        </div>
+
+        <div class="diff-card frame up d2">
+          <div class="diff-ico">
+            <div class="diff-ico-line"></div>
+            <!-- Ícone: bobina de filme -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+              <circle cx="14" cy="14" r="11"/>
+              <circle cx="14" cy="14" r="4"/>
+              <circle cx="7" cy="8" r="2"/>
+              <circle cx="21" cy="8" r="2"/>
+              <circle cx="7" cy="20" r="2"/>
+              <circle cx="21" cy="20" r="2"/>
+            </svg>
+          </div>
+          <div class="diff-body">
+            <h3>Paixão pelo audiovisual</h3>
+            <p>Videomakers apaixonados pela arte. Cada projeto é obra, porque vídeo mediano não serve para marca séria.</p>
+          </div>
+        </div>
+
+        <div class="diff-card frame up d3">
+          <div class="diff-ico">
+            <div class="diff-ico-line"></div>
+            <!-- Ícone: localização / brasil -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+              <circle cx="14" cy="14" r="11"/>
+              <line x1="3" y1="14" x2="25" y2="14"/>
+              <path d="M14 3c-4 3-6 7-6 11s2 8 6 11"/>
+              <path d="M14 3c4 3 6 7 6 11s-2 8-6 11"/>
+            </svg>
+          </div>
+          <div class="diff-body">
+            <h3>Atendemos todo o Brasil</h3>
+            <p>Baseados em Fortaleza, produzimos em todo o Ceará e demais estados. A distância não é obstáculo.</p>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:3.5rem">
+        <a href="https://wa.me/5588997083718?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20um%20or%C3%A7amento."
+           class="btn btn-primary" target="_blank" rel="noopener noreferrer">Falar com a DNK</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       6. COMO FUNCIONA
+  =========================================== -->
+  <section id="processo">
+    <div class="container">
+      <div class="sec-hdr up">
+        <span class="tag">Processo</span>
+        <h2>Como <span class="grad-text">funciona</span></h2>
+        <p>Quatro passos, do briefing à entrega. Simples, claro e sem surpresas.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="step up">
+          <div class="step-node"><span class="step-num">01</span></div>
+          <div><h3>Briefing</h3><p>Entendemos o seu objetivo, público e a mensagem que precisa ser comunicada.</p></div>
+        </div>
+        <div class="step up d1">
+          <div class="step-node"><span class="step-num">02</span></div>
+          <div><h3>Pré-produção</h3><p>Roteiro, storyboard e planejamento completo da filmagem com sua aprovação.</p></div>
+        </div>
+        <div class="step up d2">
+          <div class="step-node"><span class="step-num">03</span></div>
+          <div><h3>Produção</h3><p>Filmagem com equipe técnica especializada e equipamentos de alta qualidade.</p></div>
+        </div>
+        <div class="step up d3">
+          <div class="step-node"><span class="step-num">04</span></div>
+          <div><h3>Entrega</h3><p>Edição, finalização e entrega no prazo combinado, pronto para usar.</p></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:3.5rem">
+        <a href="https://wa.me/5588997083718?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20um%20or%C3%A7amento."
+           class="btn btn-primary" target="_blank" rel="noopener noreferrer">Começar agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       7. SAME-DAY
+  =========================================== -->
+  <section id="sameday">
+    <div class="container">
+      <div class="sd-block up">
+        <span class="tag">Exclusivo</span>
+        <h2>Cobertura com entrega<br><span class="grad-text">no mesmo dia</span></h2>
+        <p>Seu evento acontece hoje. O conteúdo precisa estar nas redes hoje. A DNK faz isso acontecer.</p>
+        <a href="https://wa.me/5588997083718?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20um%20or%C3%A7amento."
+           class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          Quero cobertura de evento
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       8. PORTFÓLIO  (tela inteira, sem espaço)
+  =========================================== -->
+  <section id="portfolio">
+    <div class="container port-header">
+      <div class="sec-hdr up" style="margin-bottom:0">
+        <span class="tag">Trabalhos</span>
+        <h2>Portfólio</h2>
+        <p>Uma seleção do que já produzimos. Cada projeto com propósito, estratégia e resultado.</p>
+      </div>
+    </div>
+
+    <div class="port-grid">
+
+      <!-- 1: Destaque grande (col 1 × 2 rows) -->
+      <a class="port-item up"
+         href="https://www.produtoradnk.com/?wix-vod-video-id=54c3197d80ce4603ad7928bd38f64dd8&wix-vod-comp-id=comp-lvjom2ns"
+         target="_blank" rel="noopener noreferrer" aria-label="Ver: 10 anos Profectum">
+        <img src="10anos profectum.avif" class="port-thumb" alt="10 anos Profectum" loading="lazy">
+        <div class="port-overlay"><div class="port-play"></div></div>
+        <div class="port-info">
+          <span class="port-title">10 anos Profectum</span>
+        </div>
+      </a>
+
+      <!-- 2: Tile superior direito -->
+      <a class="port-item up d1"
+         href="https://www.produtoradnk.com/?wix-vod-video-id=5992cbffc9d34a7eba636acf732c3f80&wix-vod-comp-id=comp-lvjom2ns"
+         target="_blank" rel="noopener noreferrer" aria-label="Ver: Tortelê - Bolo Vintage">
+        <img src="tortelebolovintage.avif" class="port-thumb" alt="Tortelê - Bolo Vintage" loading="lazy">
+        <div class="port-overlay"><div class="port-play"></div></div>
+        <div class="port-info">
+          <span class="port-title">Tortelê - Bolo Vintage</span>
+          <span class="port-dur">00:21</span>
+        </div>
+      </a>
+
+      <!-- 3: Tile superior direito -->
+      <a class="port-item up d1"
+         href="https://www.produtoradnk.com/?wix-vod-video-id=dbe5e57529244200a29a5b1a3dc47486&wix-vod-comp-id=comp-lvjom2ns"
+         target="_blank" rel="noopener noreferrer" aria-label="Ver: Expoconstruir - Master Alumínio">
+        <img src="expocontruir master aluminio.avif" class="port-thumb" alt="Expoconstruir - Master Alumínio" loading="lazy">
+        <div class="port-overlay"><div class="port-play"></div></div>
+        <div class="port-info">
+          <span class="port-title">Expoconstruir - Master Alumínio</span>
+          <span class="port-dur">03:42</span>
+        </div>
+      </a>
+
+      <!-- 4: Tile inferior esquerdo -->
+      <a class="port-item up d2"
+         href="https://www.produtoradnk.com/?wix-vod-video-id=a310b784c7b24ef1a66978071f1d420e&wix-vod-comp-id=comp-lvjom2ns"
+         target="_blank" rel="noopener noreferrer" aria-label="Ver: Profectum - São João">
+        <img src="profectum - sao joao.avif" class="port-thumb" alt="Profectum - São João" loading="lazy">
+        <div class="port-overlay"><div class="port-play"></div></div>
+        <div class="port-info">
+          <span class="port-title">Profectum - São João</span>
+          <span class="port-dur">01:52</span>
+        </div>
+      </a>
+
+      <!-- 5: Tile inferior direito -->
+      <a class="port-item up d2"
+         href="https://www.produtoradnk.com/?wix-vod-video-id=17826cf11fd142628e8b51d848ddcbec&wix-vod-comp-id=comp-lvjom2ns"
+         target="_blank" rel="noopener noreferrer" aria-label="Ver: Academy Italiana">
+        <img src="academy italiana.avif" class="port-thumb" alt="Academy Italiana" loading="lazy">
+        <div class="port-overlay"><div class="port-play"></div></div>
+        <div class="port-info">
+          <span class="port-title">Academy Italiana</span>
+          <span class="port-dur">00:05</span>
+        </div>
+      </a>
+
+      <!-- 6: Faixa full-width cinematográfica -->
+      <a class="port-item up d3"
+         href="https://www.produtoradnk.com/?wix-vod-video-id=6f7cec4fa5a143458ce19afd76fe76b9&wix-vod-comp-id=comp-lvjom2ns"
+         target="_blank" rel="noopener noreferrer" aria-label="Ver: Institucional IEPRO">
+        <img src="institucional IEPRO.jpg" class="port-thumb" alt="Institucional IEPRO" loading="lazy" style="object-position: center 20%;">
+        <div class="port-overlay"><div class="port-play"></div></div>
+        <div class="port-info">
+          <span class="port-title">Institucional IEPRO</span>
+          <span class="port-dur">14:31</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="port-cta">
+      <a href="https://instagram.com/dnkprodutora"
+         class="btn btn-ghost"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Ver portfólio no Instagram da DNK Produtora">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Ver tudo no Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       9. CTA FINAL
+  =========================================== -->
+  <section id="cta-final">
+    <div class="container">
+      <div class="cta-inner up">
+        <span class="tag">Vamos trabalhar juntos?</span>
+        <h2>Pronto para um vídeo que faz<br><span class="grad-text">sua marca ser levada</span> a sério?</h2>
+        <p>Fale agora com a DNK e receba uma proposta personalizada. Sem compromisso, sem enrolação.</p>
+        <a href="https://wa.me/5588997083718?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20um%20or%C3%A7amento."
+           class="big-btn"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Solicitar orçamento no WhatsApp da DNK Produtora">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Quero meu orçamento agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       10. FOOTER
+  =========================================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="ft-grid">
+
+        <div>
+          <span class="ft-logo">DNK<span class="dot">.</span></span>
+          <p class="ft-desc">Produtora feita por videomakers apaixonados pelo audiovisual. Do mundo das ideias para a tela do celular.</p>
+          <div class="ft-socials">
+            <a href="https://instagram.com/dnkprodutora" class="ft-soc" target="_blank" rel="noopener noreferrer" aria-label="Instagram da DNK">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/5588997083718?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20um%20or%C3%A7amento." class="ft-soc" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da DNK">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="ft-col ft-col-nav">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#servicos">Vídeo Institucional</a></li>
+            <li><a href="#servicos">Redes Sociais</a></li>
+            <li><a href="#servicos">Cobertura de Eventos</a></li>
+            <li><a href="#servicos">Vídeo Publicitário</a></li>
+            <li><a href="#servicos">Transmissão ao Vivo</a></li>
+          </ul>
+        </div>
+
+        <div class="ft-col ft-col-nav">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#processo">Processo</a></li>
+          </ul>
+        </div>
+
+        <div class="ft-col">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5588997083718" class="ft-contact" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            (88) 9 9708-3718
+          </a>
+          <a href="mailto:contato@produtoradnk.com" class="ft-contact">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            contato@produtoradnk.com
+          </a>
+          <a href="https://instagram.com/dnkprodutora" class="ft-contact" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            @dnkprodutora
+          </a>
+          <p style="color:var(--t3);font-size:.82rem;margin-top:.5rem">Fortaleza, Ceará, Brasil</p>
+        </div>
+
+      </div>
+
+      <div class="ft-bottom">
+        <p class="ft-copy">© 2025 DNK Produtora · Fortaleza, CE · Todos os direitos reservados</p>
+        <p class="ft-seo">Produtora audiovisual Fortaleza · Vídeo institucional CE · Cobertura de eventos Ceará</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal orçamento -->
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-text">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()" aria-label="Fechar">&#x2715;</button>
+      <span class="modal-tag">Orçamento gratuito</span>
+      <h2 class="modal-title" id="modal-title-text">Vamos conversar?</h2>
+      <p class="modal-sub">Preencha abaixo e a gente te responde pelo WhatsApp em minutos.</p>
+      <form id="modal-form" onsubmit="submitOrcamento(event)" novalidate>
+        <div class="modal-field">
+          <label for="m-nome">Seu nome</label>
+          <input type="text" id="m-nome" placeholder="Ex: João Silva" required autocomplete="name">
+        </div>
+        <div class="modal-field">
+          <label for="m-phone">Seu WhatsApp</label>
+          <input type="tel" id="m-phone" placeholder="(XX) 9 XXXX-XXXX" required autocomplete="tel">
+        </div>
+        <button type="submit" class="btn btn-primary modal-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Enviar pelo WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Float WhatsApp -->
+  <a href="https://wa.me/5588997083718?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20um%20or%C3%A7amento."
+     class="wa-float" target="_blank" rel="noopener noreferrer"
+     aria-label="Falar com a DNK Produtora pelo WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+    // Header shrink no scroll
+    const hdr = document.getElementById('hdr');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('stuck', window.scrollY > 60);
+    }, { passive: true });
+
+    // Fade-up via IntersectionObserver
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.up').forEach(el => io.observe(el));
+
+    // Modal orçamento
+    function openModal() {
+      document.getElementById('modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => document.getElementById('m-nome').focus(), 300);
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function submitOrcamento(e) {
+      e.preventDefault();
+      const name  = document.getElementById('m-nome').value.trim();
+      const phone = document.getElementById('m-phone').value.trim();
+      if (!name || !phone) return;
+      const msg = `Olá! Me chamo ${name}. Vim do site da DNK e quero um orçamento. Meu WhatsApp: ${phone}`;
+      window.open(`https://wa.me/5588997083718?text=${encodeURIComponent(msg)}`, '_blank');
+      closeModal();
+      document.getElementById('modal-form').reset();
+    }
+    document.getElementById('modal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // Mobile nav
+    function toggleNav(btn) {
+      const nav = document.querySelector('nav');
+      const isOpen = nav.style.display === 'flex';
+      nav.style.cssText = isOpen ? '' :
+        'display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;' +
+        'background:rgba(6,6,8,.97);padding:1.75rem 1.5rem;gap:1.5rem;' +
+        'backdrop-filter:blur(28px);border-bottom:1px solid rgba(255,255,255,.04);z-index:999;';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    }
+    document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => {
+      document.querySelector('nav').style.cssText = '';
+      document.querySelector('.burger').setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+</body>
+</html>
